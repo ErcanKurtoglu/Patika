@@ -10,7 +10,7 @@ def flatten_nD(input_list:list):
     return flattened
 
 
-def flatten(input_list:list,flatten_nD=flatten_nD):
+def flatten(input_list:list):
 
     flattened=[]
     
@@ -22,4 +22,3 @@ def flatten(input_list:list,flatten_nD=flatten_nD):
             flattened.append(element)
 
     return flattened
-
