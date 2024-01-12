@@ -1,14 +1,18 @@
 --1-)
-SELECT ROUND(AVG(rental_rate),2) FROM film;
+SELECT rating FROM film
+GROUP BY rating;
 
 --2-)
-SELECT COUNT (title) FROM film
-WHERE title LIKE 'C%';
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost 
+HAVING COUNT(*)>50;
 
 --3-)
-SELECT MAX(length) FROM film
-WHERE rental_rate=0.99;
+SELECT store_id, COUNT(*) FROM customer
+GROUP BY store_id;
 
 --4-)
-SELECT COUNT (DISTINCT replacement_cost) FROM film
-WHERE length>150;
+SELECT country_id, COUNT(*) FROM city
+GROUP BY country_id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
